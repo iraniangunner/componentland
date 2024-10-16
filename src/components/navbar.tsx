@@ -12,14 +12,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Toggle } from "@/components/ui/toggle";
-import { X,Menu } from "lucide-react";
-import {
-  Sheet,
-  SheetTrigger,
-  SheetContent,
-  SheetHeader,
-  SheetClose,
-} from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 
 export default function Navbar() {
   return (
@@ -94,21 +88,14 @@ export default function Navbar() {
                 size="icon"
                 className="rounded-full md:hidden"
               >
-                <Menu size={20} className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+                <Menu
+                  size={20}
+                  className="h-5 w-5 text-gray-500 dark:text-gray-400"
+                />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="md:hidden">
-              {/* <SheetHeader className="flex flex-row justify-between items-center space-y-0">
-                <span className="text-lg font-semibold text-foreground mx-3">
-                  Twitter
-                </span>
-                <SheetClose asChild>
-                  <Button className="h-7 w-7 p-0" variant="ghost">
-                    <X size={15} />
-                  </Button>
-                </SheetClose>
-              </SheetHeader> */}
               <div className="grid gap-4 p-4">
                 <Link
                   href="#"
