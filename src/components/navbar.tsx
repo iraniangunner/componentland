@@ -12,7 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Toggle } from "@/components/ui/toggle";
-import { Menu } from "lucide-react";
+import { Menu, User2Icon, UserIcon } from "lucide-react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 
 export default function Navbar() {
@@ -54,13 +54,8 @@ export default function Navbar() {
           </Link>
         </nav>
         <div className="flex items-center gap-4">
-          <div className="hidden items-center gap-2 text-sm font-medium md:flex">
-            <PhoneIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-            <span className="text-gray-500 dark:text-gray-400">
-              123-456-7890
-            </span>
-          </div>
-          <DropdownMenu>
+          {/* search sample*/}
+          {/* <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full">
                 <SearchIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
@@ -77,7 +72,10 @@ export default function Navbar() {
                 />
               </div>
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
+          <Button className="flex items-center text-sm font-medium px-0 py-0">
+            <Link href="/login" className="w-full h-full px-4 py-2">ورود / عضویت</Link>
+          </Button>
           <Toggle aria-label="Toggle dark mode" className="rounded-full">
             <MoonIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
           </Toggle>
