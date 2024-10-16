@@ -1,7 +1,7 @@
 
 export default function Home() {
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-white dark:bg-gray-900 min-h-[100vh]">
       <div className="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12">
         <svg
           className="mx-auto mb-4 w-10 h-10 text-gray-400"
