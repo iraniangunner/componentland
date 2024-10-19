@@ -12,7 +12,16 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Toggle } from "@/components/ui/toggle";
-import { Menu, User2Icon, UserIcon } from "lucide-react";
+import {
+  BlocksIcon,
+  HomeIcon,
+  Menu,
+  Phone,
+  PhoneCall,
+  User2Icon,
+  UserIcon,
+  UserSearch,
+} from "lucide-react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { ModeToggle } from "./mode-toggle";
 
@@ -24,7 +33,7 @@ export default function Navbar() {
           <MountainIcon className="h-6 w-6" />
           <span className="sr-only">Acme Inc</span>
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex font-regular">
+        <nav className="hidden items-center gap-6 xl:gap-10 text-sm font-medium md:flex font-bold">
           <Link
             href="/"
             className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
@@ -98,45 +107,49 @@ export default function Navbar() {
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="md:hidden font-regular">
-              <div className="grid gap-4 p-4">
+            <SheetContent side="right" className="md:hidden font-bold">
+              <div className="grid gap-6 p-2 pt-8">
                 <SheetTrigger asChild>
                   <Link
                     href="/"
-                    className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                    className="text-sm flex items-center gap-2 font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                     // prefetch={false}
                   >
-                    خانه
+                    <HomeIcon />
+                    <span>خانه </span>
                   </Link>
                 </SheetTrigger>
 
                 <SheetTrigger asChild>
                   <Link
                     href="/elements"
-                    className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                    className="text-sm flex items-center gap-2 font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                     // prefetch={false}
                   >
-                    کامپوننت ها
+                    <BlocksIcon />
+                    <span>کامپوننت ها</span>
                   </Link>
                 </SheetTrigger>
 
                 <SheetTrigger asChild>
                   <Link
                     href="/about-us"
-                    className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                    className="text-sm font-medium flex items-center gap-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                     // prefetch={false}
                   >
-                    درباره ما
+                    <UserSearch />
+                    <span>درباره ما</span>
                   </Link>
                 </SheetTrigger>
 
                 <SheetTrigger asChild>
                   <Link
                     href="/contact-us"
-                    className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                    className="text-sm font-medium flex items-center gap-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                     // prefetch={false}
                   >
-                    تماس با ما
+                    <PhoneCall />
+                    <span>تماس با ما</span>
                   </Link>
                 </SheetTrigger>
               </div>
