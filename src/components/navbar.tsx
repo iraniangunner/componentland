@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { ModeToggle } from "./mode-toggle";
+import { Separator } from "./ui/separator";
 
 export default function Navbar() {
   return (
@@ -108,7 +109,8 @@ export default function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="md:hidden font-bold">
-              <div className="grid gap-6 p-2 pt-8">
+              <div className="grid gap-6 pt-8">
+                <Separator />
                 <SheetTrigger asChild>
                   <Link
                     href="/"
