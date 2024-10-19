@@ -16,7 +16,7 @@ export default function Footer() {
             <MountainIcon className="h-6 w-6" />
             <span className="text-lg font-bold">کامپوننت لند</span>
           </Link>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-justify">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
             استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
             ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
