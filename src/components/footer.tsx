@@ -14,45 +14,48 @@ export default function Footer() {
         <div className="flex flex-col items-start gap-4">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
             <MountainIcon className="h-6 w-6" />
-            <span className="text-lg font-bold">Acme Inc</span>
+            <span className="text-lg font-bold">کامپوننت لند</span>
           </Link>
           <p className="text-muted-foreground">
-            Enabling companies of all sizes to create at the moment of
-            inspiration.
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
           </p>
         </div>
 
         <div className="lg:flex lg:justify-center lg:items-center">
           <div className="grid gap-2">
-            <h4 className="text-lg font-semibold">Quick Links</h4>
-            <nav className="flex flex-col items-start gap-1">
+            <h4 className="text-lg font-semibold">دسترسی سریع</h4>
+            <nav className="flex flex-col items-start gap-2 font-regular">
               <Link
-                href="#"
+                href="/"
                 className="text-sm hover:underline"
-                prefetch={false}
+                // prefetch={false}
               >
-                Home
+                خانه
               </Link>
               <Link
-                href="#"
+                href="/elements"
                 className="text-sm hover:underline"
-                prefetch={false}
+                // prefetch={false}
               >
-                About
+                کامپوننت ها
               </Link>
               <Link
-                href="#"
+                href="/about-us"
                 className="text-sm hover:underline"
-                prefetch={false}
+                // prefetch={false}
               >
-                Products
+                درباره ما
               </Link>
+
               <Link
-                href="#"
+                href="/contact-us"
                 className="text-sm hover:underline"
-                prefetch={false}
+                // prefetch={false}
               >
-                Contact
+                تماس با ما
               </Link>
             </nav>
           </div>
@@ -76,18 +79,17 @@ export default function Footer() {
           </nav>
         </div> */}
         <div className="grid gap-4">
-          <h4 className="text-lg font-semibold">Newsletter</h4>
+          <h4 className="text-lg font-semibold">خبر نامه</h4>
           <p className="text-sm text-muted-foreground">
-            Subscribe to our newsletter to stay up to date with our latest news
-            and updates.
+            برای اطلاع از وضعیت آخرین کامپوننت ها ایمیل خود را وارد نمایید
           </p>
           <form className="flex gap-2">
             <Input
               type="email"
-              placeholder="Enter your email"
-              className="flex-1"
+              placeholder="ایمیل خود را وارد کنید..."
+              className="flex-1 dark:border-white"
             />
-            <Button type="submit">Subscribe</Button>
+            <Button type="submit">خبرم کن</Button>
           </form>
         </div>
       </div>

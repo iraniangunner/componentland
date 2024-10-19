@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const iranYekanRegular = localFont({
+  src: "./fonts/IRANYekanXFaNum-Regular.woff",
+  variable: "--font-regular",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+
+const iranYekanBold = localFont({
+  src: "./fonts/IRANYekanXFaNum-Bold.woff",
+  variable: "--font-bold",
   weight: "100 900",
 });
 
@@ -26,9 +28,16 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${iranYekanRegular.variable} ${iranYekanBold.variable}`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

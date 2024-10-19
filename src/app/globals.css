@@ -2,8 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+html {
+  font-family: var(--font-regular);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-bold);
+}
+
+p {
+  font-family: var(--font-regular);
+}
+
+::placeholder {
+  font-family: var(--font-regular);
 }
 
 @layer utilities {
