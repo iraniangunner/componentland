@@ -10,9 +10,9 @@ import { Button } from "@/components/ui/button";
 export default function Footer() {
   return (
     <footer className="bg-muted py-12 px-8 md:py-16 lg:py-20 flex justify-center">
-      <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:max-w-[1122px]">
         <div className="flex flex-col items-start gap-4">
-          <Link href="#" className="flex items-center gap-2" prefetch={false}>
+          <Link href="/" className="flex items-center gap-2">
             <MountainIcon className="h-6 w-6" />
             <span className="text-lg font-bold">کامپوننت لند</span>
           </Link>
@@ -24,10 +24,10 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="lg:flex lg:justify-center lg:items-center">
-          <div className="grid gap-2">
+        <div className="flex justify-start md:justify-center items-start">
+          <div className="flex flex-col gap-4">
             <h4 className="text-lg font-semibold">دسترسی سریع</h4>
-            <nav className="flex flex-col items-start gap-2 font-regular">
+            <nav className="flex flex-col items-start gap-3 font-regular">
               <Link
                 href="/"
                 className="text-sm hover:underline"
@@ -59,7 +59,7 @@ export default function Footer() {
               </Link>
             </nav>
           </div>
-        </div>
+       </div>
 
         {/* <div className="grid gap-2">
           <h4 className="text-lg font-semibold">Resources</h4>
@@ -78,7 +78,7 @@ export default function Footer() {
             </Link>
           </nav>
         </div> */}
-        <div className="grid gap-4">
+        <div className="flex flex-col gap-4">
           <h4 className="text-lg font-semibold">خبر نامه</h4>
           <p className="text-sm text-muted-foreground">
             برای اطلاع از وضعیت آخرین کامپوننت ها ایمیل خود را وارد نمایید
