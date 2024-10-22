@@ -31,7 +31,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-white dark:border-gray-800 dark:bg-gray-950">
       <div className="container mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <MountainIcon className="h-6 w-6" />
+          <MountainIcon className="h-6 w-6 text-[#0073e6]" />
           <span className="sr-only">Acme Inc</span>
         </Link>
         <nav className="hidden items-center gap-6 xl:gap-10 text-sm font-medium md:flex font-bold">
@@ -66,33 +66,11 @@ export default function Navbar() {
           </Link>
         </nav>
         <div className="flex items-center gap-4">
-          {/* search sample*/}
-          {/* <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="rounded-full">
-                <SearchIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                <span className="sr-only">Search</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-[300px] p-4">
-              <div className="relative">
-                <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500 dark:text-gray-400" />
-                <Input
-                  type="search"
-                  placeholder="Search..."
-                  className="pl-8 w-full"
-                />
-              </div>
-            </DropdownMenuContent>
-          </DropdownMenu> */}
-          <Button className="flex items-center text-sm font-medium px-0 py-0">
+          <Button color="blue" className="flex items-center text-sm font-medium px-0 py-0">
             <Link href="/login" className="w-full h-full px-4 py-2">
               ورود / عضویت
             </Link>
           </Button>
-          {/* <Toggle aria-label="Toggle dark mode" className="rounded-full">
-            <MoonIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-          </Toggle> */}
           <ModeToggle />
           <Sheet>
             <SheetTrigger asChild>

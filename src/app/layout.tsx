@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import TopProgressBar from "@/components/top-progressbar";
 
 const iranYekanRegular = localFont({
   src: "./fonts/IRANYekanXFaNum-Regular.woff",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${iranYekanRegular.variable} ${iranYekanBold.variable}`}
       >
+        <TopProgressBar />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

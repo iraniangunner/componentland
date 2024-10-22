@@ -27,6 +27,17 @@ p {
   font-family: var(--font-regular);
 }
 
+/* app/globals.css */
+#nprogress .bar {
+  background: #0073e6; /* Blue color for the progress bar */
+  height: 4px; /* Adjust the height of the bar */
+}
+
+/* Hide the spinner */
+#nprogress .spinner {
+  display: none;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

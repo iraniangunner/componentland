@@ -32,7 +32,7 @@ export default function AnimatedText({
   return (
     <div className="p-4 text-xl sm:text-3xl xl:text-4xl font-bold text-primary">
       <h4 className="text-center md:text-start">{prefix}</h4>
-      <div className="relative h-[2em] lg:h-[1.5em] overflow-hidden mt-2">
+      <div className="relative h-[2em] lg:h-[1.5em] overflow-hidden mt-3">
         <AnimatePresence initial={false}>
           <motion.h4
             key={currentIndex}
@@ -40,7 +40,7 @@ export default function AnimatedText({
             animate={{ y: "0%", opacity: 1 }}
             exit={{ y: "100%", opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="absolute inset-0 text-sm sm:text-xl xl:text-2xl text-blue-500 text-center md:text-start"
+            className="absolute inset-0 text-sm sm:text-xl xl:text-2xl text-[#0073e6] text-center md:text-start"
           >
             {words[currentIndex]}
           </motion.h4>

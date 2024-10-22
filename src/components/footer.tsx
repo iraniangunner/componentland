@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:max-w-[1122px]">
         <div className="flex flex-col items-start gap-4">
           <Link href="/" className="flex items-center gap-2">
-            <MountainIcon className="h-6 w-6" />
+            <MountainIcon className="h-6 w-6 text-[#0073e6]" />
             <span className="text-lg font-bold">کامپوننت لند</span>
           </Link>
           <p className="text-muted-foreground text-justify">
