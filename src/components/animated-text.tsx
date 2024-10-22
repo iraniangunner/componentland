@@ -143,7 +143,7 @@ export default function AnimatedText({
 
         <Button
           variant="outline"
-          className="flex items-center text-xs sm:text-sm font-medium px-0 py-0 h-auto"
+          className="flex items-center text-xs sm:text-sm font-medium px-0 py-0 h-auto dark:bg-accent dark:hover:bg-background"
         >
           <Link href="/contact-us" className="w-full h-full px-3 sm:px-4 py-3">
             پیشنهاد کامپوننت جدید
