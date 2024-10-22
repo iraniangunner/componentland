@@ -46,7 +46,88 @@ export default function AnimatedText({
           </motion.h4>
         </AnimatePresence>
       </div>
-      <p className="text-sm md:text-lg mt-2 lg:mt-4 text-justify">
+      <div className="flex flex-wrap justify-center md:justify-start gap-6 mt-2">
+        <div className="flex items-center text-sm text-slate-500 dark:text-slate-50">
+          <svg
+            className="h-8 w-8 flex-none stroke-current text-slate-400 dark:text-slate-100"
+            fill="none"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <ellipse cx="16" cy="16" rx="13" ry="5"></ellipse>
+            <ellipse
+              cx="16"
+              cy="16"
+              rx="13"
+              ry="5"
+              transform="rotate(60 16 16)"
+            ></ellipse>
+            <ellipse
+              rx="13"
+              ry="5"
+              transform="matrix(-.5 .86603 .86603 .5 16 16)"
+            ></ellipse>
+            <circle cx="16" cy="16" r="2"></circle>
+          </svg>
+          <span className="mr-1">ري اکت</span>
+        </div>
+        <div className="flex items-center text-sm text-slate-500 dark:text-slate-50">
+          <svg
+            className="h-8 w-8 flex-none stroke-current text-slate-400 dark:text-slate-100"
+            fill="none"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <defs>
+              <linearGradient
+                id="next-icon-gradient-a"
+                x1="15.125"
+                y1="18.25"
+                x2="24.25"
+                y2="27.375"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset=".24" stop-color="currentColor"></stop>
+                <stop
+                  offset="1"
+                  stop-color="currentColor"
+                  stop-opacity="0"
+                ></stop>
+              </linearGradient>
+              <linearGradient
+                id="next-icon-gradient-b"
+                x1="20.5"
+                y1="11.25"
+                x2="20.5"
+                y2="18.25"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="currentColor"></stop>
+                <stop
+                  offset="1"
+                  stop-color="currentColor"
+                  stop-opacity="0"
+                ></stop>
+              </linearGradient>
+            </defs>
+            <path d="M16.25 28.5c6.765 0 12.25-5.485 12.25-12.25S23.015 4 16.25 4 4 9.485 4 16.25 9.485 28.5 16.25 28.5Z"></path>
+            <path
+              d="M12 21.5V12l12.25 14.25"
+              stroke="url(#next-icon-gradient-a)"
+            ></path>
+            <path
+              d="M21.25 12a.75.75 0 1 0-1.5 0v8.17l1.5 1.64V12Z"
+              fill="url(#next-icon-gradient-b)"
+              stroke-width="0"
+            ></path>
+          </svg>
+          <span className="mr-1">نکست جی اس</span>
+        </div>
+      </div>
+
+      <p className="text-sm md:text-lg mt-2 lg:mt-4 text-justify text-muted-foreground dark:text-white">
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
         از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
         سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
@@ -60,7 +141,10 @@ export default function AnimatedText({
           </Link>
         </Button>
 
-        <Button className="flex items-center text-xs sm:text-sm font-medium px-0 py-0 h-auto">
+        <Button
+          variant="outline"
+          className="flex items-center text-xs sm:text-sm font-medium px-0 py-0 h-auto"
+        >
           <Link href="/contact-us" className="w-full h-full px-3 sm:px-4 py-3">
             پیشنهاد کامپوننت جدید
           </Link>

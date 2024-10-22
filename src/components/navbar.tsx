@@ -34,11 +34,10 @@ export default function Navbar() {
           <MountainIcon className="h-6 w-6 text-[#0073e6]" />
           <span className="sr-only">Acme Inc</span>
         </Link>
-        <nav className="hidden items-center gap-6 xl:gap-10 text-sm font-medium md:flex font-bold">
+        <nav className="hidden items-center gap-6 xl:gap-10  md:flex font-bold">
           <Link
             href="/"
             className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-            // prefetch={false}
           >
             خانه
           </Link>
@@ -46,27 +45,27 @@ export default function Navbar() {
           <Link
             href="/elements"
             className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-            // prefetch={false}
           >
             کامپوننت ها
           </Link>
           <Link
             href="/about-us"
             className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-            // prefetch={false}
           >
             درباره ما
           </Link>
           <Link
             href="/contact-us"
             className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-            // prefetch={false}
           >
             تماس با ما
           </Link>
         </nav>
         <div className="flex items-center gap-4">
-          <Button color="blue" className="flex items-center text-sm font-medium px-0 py-0">
+          <Button
+            color="blue"
+            className="flex items-center text-sm font-medium px-0 py-0"
+          >
             <Link href="/login" className="w-full h-full px-4 py-2">
               ورود / عضویت
             </Link>
@@ -93,7 +92,6 @@ export default function Navbar() {
                   <Link
                     href="/"
                     className="text-sm flex items-center gap-2 font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                    // prefetch={false}
                   >
                     <HomeIcon />
                     <span>خانه </span>

@@ -1,96 +1,68 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/035aszaNt9A
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
-    <footer className="bg-muted py-12 px-8 md:py-16 lg:py-20 flex justify-center">
-      <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:max-w-[1122px]">
-        <div className="flex flex-col items-start gap-4">
-          <Link href="/" className="flex items-center gap-2">
-            <MountainIcon className="h-6 w-6 text-[#0073e6]" />
-            <span className="text-lg font-bold">کامپوننت لند</span>
-          </Link>
-          <p className="text-muted-foreground text-justify">
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
-            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-          </p>
-        </div>
-
-        <div className="flex justify-start md:justify-center items-start">
-          <div className="flex flex-col gap-4">
-            <h4 className="text-lg font-semibold">دسترسی سریع</h4>
-            <nav className="flex flex-col items-start gap-3 font-regular">
-              <Link
-                href="/"
-                className="text-sm hover:underline"
-                // prefetch={false}
-              >
-                خانه
-              </Link>
-              <Link
-                href="/elements"
-                className="text-sm hover:underline"
-                // prefetch={false}
-              >
-                کامپوننت ها
-              </Link>
-              <Link
-                href="/about-us"
-                className="text-sm hover:underline"
-                // prefetch={false}
-              >
-                درباره ما
-              </Link>
-
-              <Link
-                href="/contact-us"
-                className="text-sm hover:underline"
-                // prefetch={false}
-              >
-                تماس با ما
-              </Link>
-            </nav>
+    <footer>
+      <div className="bg-muted dark:bg-gray-950 py-12 px-8 md:py-16 lg:py-20 flex justify-center items-center">
+        <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:max-w-[1122px]">
+          <div className="flex flex-col items-start gap-4">
+            <Link href="/" className="flex items-center gap-2">
+              <MountainIcon className="h-6 w-6 text-[#0073e6]" />
+              <span className="text-lg font-bold">کامپوننت لند</span>
+            </Link>
+            <p className="text-muted-foreground dark:text-white text-justify">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+              ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+              و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+            </p>
           </div>
-       </div>
+          <div className="flex justify-start md:justify-center items-start">
+            <div className="flex flex-col gap-4">
+              <h4 className="text-lg font-semibold">دسترسی سریع</h4>
+              <nav className="flex flex-col items-start gap-3 font-regular text-muted-foreground dark:text-white">
+                <Link href="/" className="text-sm hover:underline">
+                  خانه
+                </Link>
+                <Link href="/elements" className="text-sm hover:underline">
+                  کامپوننت ها
+                </Link>
+                <Link href="/about-us" className="text-sm hover:underline">
+                  درباره ما
+                </Link>
 
-        {/* <div className="grid gap-2">
-          <h4 className="text-lg font-semibold">Resources</h4>
-          <nav className="grid gap-1">
-            <Link href="#" className="text-sm hover:underline" prefetch={false}>
-              Blog
-            </Link>
-            <Link href="#" className="text-sm hover:underline" prefetch={false}>
-              Documentation
-            </Link>
-            <Link href="#" className="text-sm hover:underline" prefetch={false}>
-              Support
-            </Link>
-            <Link href="#" className="text-sm hover:underline" prefetch={false}>
-              FAQs
-            </Link>
-          </nav>
-        </div> */}
-        <div className="flex flex-col gap-4">
-          <h4 className="text-lg font-semibold">خبر نامه</h4>
-          <p className="text-sm text-muted-foreground">
-            برای اطلاع از وضعیت آخرین کامپوننت ها ایمیل خود را وارد نمایید
+                <Link href="/contact-us" className="text-sm hover:underline">
+                  تماس با ما
+                </Link>
+              </nav>
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <h4 className="text-lg font-semibold">خبر نامه</h4>
+            <p className="text-sm text-muted-foreground dark:text-white">
+              برای اطلاع از وضعیت آخرین کامپوننت ها ایمیل خود را وارد نمایید
+            </p>
+            <form className="flex gap-2">
+              <Input
+                type="email"
+                placeholder="ایمیل خود را وارد کنید..."
+                className="flex-1 dark:border-white dark:placeholder:text-white"
+              />
+              <Button type="submit">خبرم کن</Button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-muted dark:bg-gray-950">
+        <div className="px-8 py-4 border-t dark:border-muted-foreground flex justify-center items-center md:max-w-[1122px] mx-auto">
+          <p className=" text-sm sm:text-[16px]">
+            © تمامی حقوق برای{" "}
+            <span className="font-bold text-[#0073e6]">کامپوننت لند</span> محفوظ
+            است
           </p>
-          <form className="flex gap-2">
-            <Input
-              type="email"
-              placeholder="ایمیل خود را وارد کنید..."
-              className="flex-1 dark:border-white"
-            />
-            <Button type="submit">خبرم کن</Button>
-          </form>
         </div>
       </div>
     </footer>
