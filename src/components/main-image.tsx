@@ -40,7 +40,7 @@ export function MainImage() {
                       d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
                     ></path>
                   </svg>
-                  Tailwind Labs / Website Redesign
+                  کامپوننت های ری اکت / اسلایدر
                 </div>
                 <div className="flex items-center rounded-md p-1.5">
                   <svg
@@ -55,7 +55,7 @@ export function MainImage() {
                       d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
                     ></path>
                   </svg>
-                  Laravel LLC / Conference Branding
+                  کامپوننت های ری اکت / منو
                 </div>
               </div>
               <div className="border-t border-slate-400/20 dark:border-slate-50/20 px-3.5 py-3 font-regular">
@@ -136,11 +136,11 @@ export function MainImage() {
           </div>
           <div className="relative p-4">
             <div className="pointer-events-auto relative inline-flex rounded-md bg-white dark:bg-accent text-[0.8125rem] font-medium leading-5 text-slate-700 dark:text-slate-50 shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50/10 hover:bg-slate-50 dark:hover:bg-background hover:text-slate-900">
-              <div className="flex px-3 py-2">
+              <div className="flex px-3 py-2 font-regular">
                 <svg className="mr-2.5 h-5 w-5 flex-none fill-slate-400 dark:fill-slate-50">
                   <path d="M5 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14l-5-2.5L5 18V4Z"></path>
                 </svg>
-                Bookmark
+                ذخیره
               </div>
               <div className="border-r border-slate-400/20 dark:border-slate-50/20 px-2.5 py-2">
                 12k
@@ -155,8 +155,8 @@ export function MainImage() {
             </div>
           </div>
           <div className="relative p-4">
-            <div className="pointer-events-auto rounded-md bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">
-              Button A
+            <div className="pointer-events-auto rounded-md font-regular bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">
+             ارسال
             </div>
           </div>
           <div className="z-0">
@@ -182,7 +182,7 @@ export function MainImage() {
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
               <div className="mr-4 flex-auto">
-                <div className="font-medium">Emily Selman</div>
+                <div className="font-medium font-regular">علی علیزاده</div>
                 <div className="mt-1 text-slate-500 dark:text-slate-300 font-regular">
                   درخواستی برای شما ارسال شده
                 </div>
@@ -218,9 +218,9 @@ export function MainImage() {
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
               <div className="mr-4 flex-auto">
-                <div className="font-medium">Leonard Krasner</div>
+                <div className="font-medium font-regular">امین حبیب پور</div>
                 <div className="mt-1 text-slate-700 dark:text-slate-300">
-                  @leonardkrasner
+                  amin@gmail.com
                 </div>
               </div>
               <div className="pointer-events-auto ml-4 flex-none font-regular rounded-md px-2 py-[0.3125rem] font-medium text-slate-700 dark:text-slate-50 shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50/10 dark:hover:bg-background hover:bg-slate-50">
@@ -241,9 +241,9 @@ export function MainImage() {
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
               <div className="mr-4 flex-auto">
-                <div className="font-medium">Floyd Miles</div>
+                <div className="font-medium font-regular">هادی محمدی</div>
                 <div className="mt-1 text-slate-700 dark:text-slate-300">
-                  @floydmiles
+                  hadi@hotmail.com
                 </div>
               </div>
               <div className="pointer-events-auto ml-4 flex-none font-regular rounded-md px-2 py-[0.3125rem] font-medium text-slate-700 dark:text-slate-50 shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50/10 dark:hover:bg-background hover:bg-slate-50">
