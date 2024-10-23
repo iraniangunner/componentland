@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Switch } from "@/components/ui/switch";
 
 export function MainImage() {
   return (
@@ -10,7 +11,7 @@ export function MainImage() {
             <div>
               <div className="flex items-center px-3.5 py-2.5 text-slate-400 dark:text-slate-50 font-regular">
                 <svg
-                  className="mr-2 h-5 w-5 stroke-slate-500 dark:stroke-slate-50"
+                  className="ml-2 h-5 w-5 stroke-slate-500 dark:stroke-slate-50"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="2"
@@ -127,9 +128,7 @@ export function MainImage() {
         </div>
         <div className="relative ml-6 flex items-center justify-end">
           <div className="relative p-4">
-            <div className="pointer-events-auto h-6 w-10 rounded-full p-1 ring-1 ring-inset transition duration-200 ease-in-out bg-slate-900/10 dark:bg-accent ring-slate-900/5 dark:ring-slate-50/5">
-              <div className="h-4 w-4 rounded-full bg-white dark:bg-slate-50 shadow-sm ring-1 ring-slate-700/10  dark:ring-slate-50/10 transition duration-200 ease-in-out"></div>
-            </div>
+            <Switch dir="ltr" />
             <div className="z-0">
               <div className="absolute -top-full bottom-2/3 right-0 w-px bg-slate-900/[0.2] dark:bg-slate-50/[0.2] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
             </div>
@@ -156,7 +155,7 @@ export function MainImage() {
           </div>
           <div className="relative p-4">
             <div className="pointer-events-auto rounded-md font-regular bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">
-             ارسال
+              ارسال
             </div>
           </div>
           <div className="z-0">
