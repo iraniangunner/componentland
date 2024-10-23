@@ -168,11 +168,6 @@ export function MainImage() {
         <div className="relative p-4">
           <div className="w-[19.875rem] rounded-lg bg-white dark:bg-accent text-[0.8125rem] leading-5 text-slate-900 dark:text-slate-50 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 dark:ring-slate-50/10">
             <div className="flex items-center p-4 pb-0">
-              {/* <img
-            src="/plus/img/avatar-3.jpg"
-            alt=""
-            className="h-10 w-10 flex-none rounded-full"
-          /> */}
               <Avatar>
                 <AvatarImage
                   src="https://github.com/shadcn.png"
@@ -204,11 +199,6 @@ export function MainImage() {
         <div className="relative p-4">
           <div className="w-[24.5rem] divide-y divide-slate-400/20 dark:divide-slate-50/10 rounded-lg bg-white dark:bg-accent text-[0.8125rem] leading-5 text-slate-900 dark:text-slate-50 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 dark:ring-slate-50/10">
             <div className="flex items-center p-4">
-              {/* <img
-            src="/plus/img/avatar-1.jpg"
-            alt=""
-            className="h-10 w-10 flex-none rounded-full"
-          /> */}
               <Avatar>
                 <AvatarImage
                   src="https://github.com/shadcn.png"
@@ -227,11 +217,6 @@ export function MainImage() {
               </div>
             </div>
             <div className="flex items-center p-4">
-              {/* <img
-            src="/plus/img/avatar-2.jpg"
-            alt=""
-            className="h-10 w-10 flex-none rounded-full"
-          /> */}
               <Avatar>
                 <AvatarImage
                   src="https://github.com/shadcn.png"
