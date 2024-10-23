@@ -5,7 +5,7 @@ export function MainImage() {
     <>
       <div className="z-20 flex flex-col">
         <div className="relative p-4">
-          <div className="absolute bottom-0 left-0 right-11 top-8 bg-slate-900/[0.03] dark:bg-slate-50/[0.03]"></div>
+          <div className="absolute bottom-0 left-0 right-11 top-8"></div>
           <div className="pointer-events-auto relative z-10 w-[24.125rem] rounded-lg dark:bg-accent bg-white text-[0.8125rem] leading-5 text-slate-700 dark:text-slate-50 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 dark:ring-slate-50/10">
             <div>
               <div className="flex items-center px-3.5 py-2.5 text-slate-400 dark:text-slate-50 font-regular">
@@ -125,7 +125,7 @@ export function MainImage() {
             </div>
           </div>
         </div>
-        <div className="relative mr-6 flex items-center justify-end">
+        <div className="relative ml-6 flex items-center justify-end">
           <div className="relative p-4">
             <div className="pointer-events-auto h-6 w-10 rounded-full p-1 ring-1 ring-inset transition duration-200 ease-in-out bg-slate-900/10 dark:bg-accent ring-slate-900/5 dark:ring-slate-50/5">
               <div className="h-4 w-4 rounded-full bg-white dark:bg-slate-50 shadow-sm ring-1 ring-slate-700/10  dark:ring-slate-50/10 transition duration-200 ease-in-out"></div>
