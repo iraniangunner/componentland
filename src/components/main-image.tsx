@@ -27,7 +27,7 @@ export function MainImage() {
                 <div className="mb-1.5 text-[0.6875rem] font-semibold text-slate-500 dark:text-slate-50">
                   پروژه های اخیر
                 </div>
-                <div className="flex items-center rounded-md p-1.5 bg-[#0073e6] text-white">
+                <div className="flex items-center rounded-md p-1.5 bg-indigo-600 text-white">
                   <svg
                     className="ml-2.5 h-5 w-5 flex-none stroke-white"
                     fill="none"
@@ -155,7 +155,7 @@ export function MainImage() {
             </div>
           </div>
           <div className="relative p-4">
-            <div className="pointer-events-auto rounded-md font-regular bg-[#0073e6] px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-[#0061c2]">
+            <div className="pointer-events-auto rounded-md font-regular bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">
              ارسال
             </div>
           </div>
@@ -189,7 +189,7 @@ export function MainImage() {
               </div>
             </div>
             <div className="flex gap-3 p-4 font-regular">
-              <div className="pointer-events-auto rounded-md bg-[#0073e6] px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-[#0061c2]">
+              <div className="pointer-events-auto rounded-md bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">
                 قبول
               </div>
               <div className="pointer-events-auto rounded-md px-4 py-2 text-center font-medium shadow-sm ring-1 ring-slate-700/10 hover:bg-slate-50 dark:hover:bg-background dark:ring-slate-50/10">
