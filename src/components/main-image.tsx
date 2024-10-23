@@ -29,7 +29,7 @@ export function MainImage() {
                 </div>
                 <div className="flex items-center rounded-md p-1.5 bg-indigo-600 text-white">
                   <svg
-                    className="mr-2.5 h-5 w-5 flex-none stroke-white"
+                    className="ml-2.5 h-5 w-5 flex-none stroke-white"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="2"
@@ -44,7 +44,7 @@ export function MainImage() {
                 </div>
                 <div className="flex items-center rounded-md p-1.5">
                   <svg
-                    className="mr-2.5 h-5 w-5 flex-none stroke-slate-400 dark:stroke-slate-50"
+                    className="ml-2.5 h-5 w-5 flex-none stroke-slate-400 dark:stroke-slate-50"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="2"
@@ -61,7 +61,7 @@ export function MainImage() {
               <div className="border-t border-slate-400/20 dark:border-slate-50/20 px-3.5 py-3 font-regular">
                 <div className="flex items-center rounded-md p-1.5">
                   <svg
-                    className="mr-2.5 h-5 w-5 flex-none stroke-slate-400 dark:stroke-slate-50"
+                    className="ml-2.5 h-5 w-5 flex-none stroke-slate-400 dark:stroke-slate-50"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="2"
@@ -74,7 +74,7 @@ export function MainImage() {
                 </div>
                 <div className="flex items-center rounded-md p-1.5">
                   <svg
-                    className="mr-2.5 h-5 w-5 flex-none stroke-slate-400 dark:stroke-slate-50"
+                    className="ml-2.5 h-5 w-5 flex-none stroke-slate-400 dark:stroke-slate-50"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="2"
@@ -87,7 +87,7 @@ export function MainImage() {
                 </div>
                 <div className="flex items-center rounded-md p-1.5">
                   <svg
-                    className="mr-2.5 h-5 w-5 flex-none stroke-slate-400 dark:stroke-slate-50"
+                    className="ml-2.5 h-5 w-5 flex-none stroke-slate-400 dark:stroke-slate-50"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="2"
@@ -100,7 +100,7 @@ export function MainImage() {
                 </div>
                 <div className="flex items-center rounded-md p-1.5">
                   <svg
-                    className="mr-2.5 h-5 w-5 flex-none stroke-slate-400 dark:stroke-slate-50"
+                    className="ml-2.5 h-5 w-5 flex-none stroke-slate-400 dark:stroke-slate-50"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="2"
