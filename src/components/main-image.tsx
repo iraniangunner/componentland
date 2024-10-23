@@ -5,7 +5,7 @@ export function MainImage() {
     <>
       <div className="z-20 flex flex-col">
         <div className="relative p-4">
-          <div className="absolute bottom-0 left-11 right-0 top-8 bg-slate-900/[0.03]"></div>
+          <div className="absolute bottom-0 left-0 right-11 top-8 bg-slate-900/[0.03] dark:bg-slate-50/[0.03]"></div>
           <div className="pointer-events-auto relative z-10 w-[24.125rem] rounded-lg dark:bg-accent bg-white text-[0.8125rem] leading-5 text-slate-700 dark:text-slate-50 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 dark:ring-slate-50/10">
             <div>
               <div className="flex items-center px-3.5 py-2.5 text-slate-400 dark:text-slate-50 font-regular">
@@ -115,9 +115,9 @@ export function MainImage() {
             </div>
           </div>
           <div className="z-0">
-            <div className="absolute -right-[95%] left-0 top-8 h-px bg-slate-900/[0.1] dark:bg-slate-50/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-            <div className="absolute -bottom-16 -top-2 right-0 w-px bg-slate-900/[0.1] dark:bg-slate-50/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-            <div className="absolute -right-2/3 top-px -mb-px flex h-8 items-end overflow-hidden">
+            <div className="absolute -left-[95%] right-0 top-8 h-px bg-slate-900/[0.1] dark:bg-slate-50/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+            <div className="absolute -bottom-16 -top-2 left-0 w-px bg-slate-900/[0.1] dark:bg-slate-50/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+            <div className="absolute -left-2/3 top-px -mb-px flex h-8 items-end overflow-hidden">
               <div className="flex -mb-px h-[2px] w-80 -scale-x-100">
                 <div className="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
                 <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
@@ -131,7 +131,7 @@ export function MainImage() {
               <div className="h-4 w-4 rounded-full bg-white dark:bg-slate-50 shadow-sm ring-1 ring-slate-700/10  dark:ring-slate-50/10 transition duration-200 ease-in-out"></div>
             </div>
             <div className="z-0">
-              <div className="absolute -top-full bottom-2/3 left-0 w-px bg-slate-900/[0.2] dark:bg-accent [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+              <div className="absolute -top-full bottom-2/3 right-0 w-px bg-slate-900/[0.2] dark:bg-slate-50/[0.2] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
             </div>
           </div>
           <div className="relative p-4">
@@ -199,7 +199,7 @@ export function MainImage() {
           </div>
           <div className="z-0">
             <div className="absolute -left-12 -right-4 bottom-0 h-px bg-slate-900/[0.1] dark:bg-slate-50/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-            {/* <div className="absolute -bottom-16 -top-2 left-[21.875rem] w-px bg-slate-900/[0.1] dark:bg-slate-50/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div> */}
+            <div className="absolute -bottom-16 -top-2 right-[21.875rem] w-px bg-slate-900/[0.1] dark:bg-slate-50/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
           </div>
         </div>
         <div className="relative p-4">
@@ -221,7 +221,7 @@ export function MainImage() {
                 <div className="font-medium">Leonard Krasner</div>
                 <div className="mt-1 text-slate-700 dark:text-slate-300">@leonardkrasner</div>
               </div>
-              <div className="pointer-events-auto ml-4 flex-none rounded-md px-2 py-[0.3125rem] font-medium text-slate-700 shadow-sm ring-1 ring-slate-700/10 hover:bg-slate-50">
+              <div className="pointer-events-auto ml-4 flex-none rounded-md px-2 py-[0.3125rem] font-medium text-slate-700 dark:text-slate-50 shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50/10 dark:hover:bg-background hover:bg-slate-50">
                 View
               </div>
             </div>
@@ -242,7 +242,7 @@ export function MainImage() {
                 <div className="font-medium">Floyd Miles</div>
                 <div className="mt-1 text-slate-700 dark:text-slate-300">@floydmiles</div>
               </div>
-              <div className="pointer-events-auto ml-4 flex-none rounded-md px-2 py-[0.3125rem] font-medium text-slate-700 shadow-sm ring-1 ring-slate-700/10 hover:bg-slate-50">
+              <div className="pointer-events-auto ml-4 flex-none rounded-md px-2 py-[0.3125rem] font-medium text-slate-700 dark:text-slate-50 shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50/10 dark:hover:bg-background hover:bg-slate-50">
                 View
               </div>
             </div>

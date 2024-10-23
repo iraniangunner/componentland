@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="bg-muted dark:bg-gray-950 py-12 px-8 md:py-16 lg:py-20 flex justify-center items-center">
-        <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:max-w-[1200px]">
+        <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:max-w-[1400px]">
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center gap-2">
               <MountainIcon className="h-6 w-6 text-[#0073e6]" />
