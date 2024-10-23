@@ -57,7 +57,7 @@ export default function Footer() {
       </div>
 
       <div className="bg-muted dark:bg-gray-950">
-        <div className="px-8 py-4 border-t dark:border-muted-foreground flex justify-center items-center md:max-w-[1122px] mx-auto">
+        <div className="px-8 py-4 border-t dark:border-muted-foreground flex justify-center items-center md:max-w-[1400px] mx-auto">
           <p className=" text-sm sm:text-[16px]">
             © تمامی حقوق برای{" "}
             <span className="font-bold text-[#0073e6]">کامپوننت لند</span> محفوظ

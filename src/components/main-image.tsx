@@ -128,7 +128,7 @@ export function MainImage() {
         </div>
         <div className="relative ml-6 flex items-center justify-end">
           <div className="relative p-4">
-            <Switch dir="ltr" />
+            <Switch dir="ltr" className="data-[state=checked]:bg-indigo-600"/>
             <div className="z-0">
               <div className="absolute -top-full bottom-2/3 right-0 w-px bg-slate-900/[0.2] dark:bg-slate-50/[0.2] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
             </div>
