@@ -96,7 +96,7 @@ export function MainImage() {
                   >
                     <path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
                   </svg>
-                 اضافه کردن هشتگ...
+                  اضافه کردن هشتگ...
                 </div>
                 <div className="flex items-center rounded-md p-1.5">
                   <svg
@@ -109,7 +109,7 @@ export function MainImage() {
                   >
                     <path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
                   </svg>
-                 اضافه کردن برچسب...
+                  اضافه کردن برچسب...
                 </div>
               </div>
             </div>
@@ -125,7 +125,7 @@ export function MainImage() {
             </div>
           </div>
         </div>
-        <div className="relative ml-6 flex items-center justify-end">
+        <div className="relative mr-6 flex items-center justify-end">
           <div className="relative p-4">
             <div className="pointer-events-auto h-6 w-10 rounded-full p-1 ring-1 ring-inset transition duration-200 ease-in-out bg-slate-900/10 dark:bg-accent ring-slate-900/5 dark:ring-slate-50/5">
               <div className="h-4 w-4 rounded-full bg-white dark:bg-slate-50 shadow-sm ring-1 ring-slate-700/10  dark:ring-slate-50/10 transition duration-200 ease-in-out"></div>
@@ -181,19 +181,19 @@ export function MainImage() {
                 />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
-              <div className="ml-4 flex-auto">
+              <div className="mr-4 flex-auto">
                 <div className="font-medium">Emily Selman</div>
-                <div className="mt-1 text-slate-500 dark:text-slate-300">
-                  Sent you an invite to connect.
+                <div className="mt-1 text-slate-500 dark:text-slate-300 font-regular">
+                  درخواستی برای شما ارسال شده
                 </div>
               </div>
             </div>
-            <div className="flex gap-3 p-4">
+            <div className="flex gap-3 p-4 font-regular">
               <div className="pointer-events-auto rounded-md bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">
-                Accept
+                قبول
               </div>
               <div className="pointer-events-auto rounded-md px-4 py-2 text-center font-medium shadow-sm ring-1 ring-slate-700/10 hover:bg-slate-50 dark:hover:bg-background dark:ring-slate-50/10">
-                Decline
+                رد
               </div>
             </div>
           </div>
@@ -217,12 +217,14 @@ export function MainImage() {
                 />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
-              <div className="ml-4 flex-auto">
+              <div className="mr-4 flex-auto">
                 <div className="font-medium">Leonard Krasner</div>
-                <div className="mt-1 text-slate-700 dark:text-slate-300">@leonardkrasner</div>
+                <div className="mt-1 text-slate-700 dark:text-slate-300">
+                  @leonardkrasner
+                </div>
               </div>
-              <div className="pointer-events-auto ml-4 flex-none rounded-md px-2 py-[0.3125rem] font-medium text-slate-700 dark:text-slate-50 shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50/10 dark:hover:bg-background hover:bg-slate-50">
-                View
+              <div className="pointer-events-auto ml-4 flex-none font-regular rounded-md px-2 py-[0.3125rem] font-medium text-slate-700 dark:text-slate-50 shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50/10 dark:hover:bg-background hover:bg-slate-50">
+                نمایش
               </div>
             </div>
             <div className="flex items-center p-4">
@@ -238,17 +240,19 @@ export function MainImage() {
                 />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
-              <div className="ml-4 flex-auto">
+              <div className="mr-4 flex-auto">
                 <div className="font-medium">Floyd Miles</div>
-                <div className="mt-1 text-slate-700 dark:text-slate-300">@floydmiles</div>
+                <div className="mt-1 text-slate-700 dark:text-slate-300">
+                  @floydmiles
+                </div>
               </div>
-              <div className="pointer-events-auto ml-4 flex-none rounded-md px-2 py-[0.3125rem] font-medium text-slate-700 dark:text-slate-50 shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50/10 dark:hover:bg-background hover:bg-slate-50">
-                View
+              <div className="pointer-events-auto ml-4 flex-none font-regular rounded-md px-2 py-[0.3125rem] font-medium text-slate-700 dark:text-slate-50 shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50/10 dark:hover:bg-background hover:bg-slate-50">
+                نمایش
               </div>
             </div>
             <div className="p-4">
-              <div className="pointer-events-auto rounded-md px-4 py-2 text-center font-medium shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50 hover:bg-slate-50 dark:hover:bg-background">
-                View all
+              <div className="pointer-events-autoد font-regular rounded-md px-4 py-2 text-center font-medium shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50 hover:bg-slate-50 dark:hover:bg-background">
+                نمایش همه
               </div>
             </div>
           </div>
