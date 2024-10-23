@@ -7,7 +7,7 @@ export function MainImage() {
       <div className="z-20 flex flex-col">
         <div className="relative p-4">
           <div className="absolute bottom-0 left-0 right-11 top-8"></div>
-          <div className="pointer-events-auto relative z-10 w-[24.125rem] rounded-lg dark:bg-accent bg-white text-[0.8125rem] leading-5 text-slate-700 dark:text-slate-50 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 dark:ring-slate-50/10">
+          <div className="pointer-events-auto relative z-10 w-[24.125rem] rounded-lg dark:bg-[#111827] bg-white text-[0.8125rem] leading-5 text-slate-700 dark:text-slate-50 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 dark:ring-slate-50/10">
             <div>
               <div className="flex items-center px-3.5 py-2.5 text-slate-400 dark:text-slate-50 font-regular">
                 <svg
@@ -134,7 +134,7 @@ export function MainImage() {
             </div>
           </div>
           <div className="relative p-4">
-            <div className="pointer-events-auto relative inline-flex rounded-md bg-white dark:bg-accent text-[0.8125rem] font-medium leading-5 text-slate-700 dark:text-slate-50 shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50/10 hover:bg-slate-50 dark:hover:bg-background hover:text-slate-900">
+            <div className="pointer-events-auto relative inline-flex rounded-md bg-white dark:bg-[#111827] text-[0.8125rem] font-medium leading-5 text-slate-700 dark:text-slate-50 shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50/10 hover:bg-slate-50 dark:hover:bg-background hover:text-slate-900">
               <div className="flex px-3 py-2 font-regular">
                 <svg className="mr-2.5 h-5 w-5 flex-none fill-slate-400 dark:fill-slate-50">
                   <path d="M5 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14l-5-2.5L5 18V4Z"></path>
@@ -166,7 +166,7 @@ export function MainImage() {
       </div>
       <div className="relative z-10 mt-8">
         <div className="relative p-4">
-          <div className="w-[19.875rem] rounded-lg bg-white dark:bg-accent text-[0.8125rem] leading-5 text-slate-900 dark:text-slate-50 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 dark:ring-slate-50/10">
+          <div className="w-[19.875rem] rounded-lg bg-white dark:bg-[#111827] text-[0.8125rem] leading-5 text-slate-900 dark:text-slate-50 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 dark:ring-slate-50/10">
             <div className="flex items-center p-4 pb-0">
               <Avatar>
                 <AvatarImage
@@ -197,7 +197,7 @@ export function MainImage() {
           </div>
         </div>
         <div className="relative p-4">
-          <div className="w-[24.5rem] divide-y divide-slate-400/20 dark:divide-slate-50/10 rounded-lg bg-white dark:bg-accent text-[0.8125rem] leading-5 text-slate-900 dark:text-slate-50 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 dark:ring-slate-50/10">
+          <div className="w-[24.5rem] divide-y divide-slate-400/20 dark:divide-slate-50/10 rounded-lg bg-white dark:bg-[#111827] text-[0.8125rem] leading-5 text-slate-900 dark:text-slate-50 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 dark:ring-slate-50/10">
             <div className="flex items-center p-4">
               <Avatar>
                 <AvatarImage
@@ -235,7 +235,7 @@ export function MainImage() {
               </div>
             </div>
             <div className="p-4">
-              <div className="pointer-events-autoد font-regular rounded-md px-4 py-2 text-center font-medium shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50 hover:bg-slate-50 dark:hover:bg-background">
+              <div className="pointer-events-auto font-regular rounded-md px-4 py-2 text-center font-medium shadow-sm ring-1 ring-slate-700/10 dark:ring-slate-50/10 hover:bg-slate-50 dark:hover:bg-background">
                 نمایش همه
               </div>
             </div>
