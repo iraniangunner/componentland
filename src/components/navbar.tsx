@@ -64,7 +64,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Button
             color="blue"
-            className="flex items-center text-sm font-medium px-0 py-0"
+            className="hidden md:flex items-center text-sm font-medium px-0 py-0"
           >
             <Link href="/login" className="w-full h-full px-4 py-2">
               ورود / عضویت
@@ -86,7 +86,7 @@ export default function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="md:hidden font-bold">
-              <div className="grid gap-6 pt-8">
+              <div className="flex flex-col gap-6 pt-8 h-full">
                 <Separator />
                 <SheetTrigger asChild>
                   <Link
@@ -102,7 +102,6 @@ export default function Navbar() {
                   <Link
                     href="/elements"
                     className="text-sm flex items-center gap-2 font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                    // prefetch={false}
                   >
                     <BlocksIcon />
                     <span>کامپوننت ها</span>
@@ -113,7 +112,6 @@ export default function Navbar() {
                   <Link
                     href="/about-us"
                     className="text-sm font-medium flex items-center gap-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                    // prefetch={false}
                   >
                     <UserSearch />
                     <span>درباره ما</span>
@@ -124,11 +122,21 @@ export default function Navbar() {
                   <Link
                     href="/contact-us"
                     className="text-sm font-medium flex items-center gap-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                    // prefetch={false}
                   >
                     <PhoneCall />
                     <span>تماس با ما</span>
                   </Link>
+                </SheetTrigger>
+
+                <SheetTrigger asChild className="mt-auto">
+                  <Button
+                    color="blue"
+                    className="items-center text-sm font-medium px-0 py-0"
+                  >
+                    <Link href="/login" className="w-full h-full px-4 py-2">
+                      ورود / عضویت
+                    </Link>
+                  </Button>
                 </SheetTrigger>
               </div>
             </SheetContent>
