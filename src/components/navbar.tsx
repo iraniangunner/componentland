@@ -1,8 +1,3 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/obus3LxsAfo
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import Link from "next/link";
 import {
   DropdownMenu,
@@ -18,6 +13,8 @@ import {
   Menu,
   Phone,
   PhoneCall,
+  ShoppingBag,
+  ShoppingCartIcon,
   User2Icon,
   UserIcon,
   UserSearch,
@@ -25,6 +22,7 @@ import {
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { ModeToggle } from "./mode-toggle";
 import { Separator } from "./ui/separator";
+import { ShoppingCart } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -62,12 +60,18 @@ export default function Navbar() {
           </Link>
         </nav>
         <div className="flex items-center gap-4">
-          <Button
-            color="blue"
-            className="hidden md:flex items-center text-sm font-medium px-0 py-0"
-          >
+          <Button className="hidden md:flex items-center text-sm font-medium px-0 py-0">
             <Link href="/login" className="w-full h-full px-4 py-2">
               ورود / عضویت
+            </Link>
+          </Button>
+
+          <Button
+            variant="outline"
+            className="flex items-center text-sm font-medium px-0 py-0 dark:bg-accent dark:hover:bg-background"
+          >
+            <Link href="/cart" className="w-full h-full px-2 py-2">
+              <ShoppingBag size={20} />
             </Link>
           </Button>
           <ModeToggle />
