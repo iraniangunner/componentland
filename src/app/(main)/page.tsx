@@ -6,7 +6,7 @@ export default function Home() {
     <main className="bg-white dark:bg-gray-900">
       <FirstSection />
       {/* <SecondSection/> */}
-      <ResponsiveView/>
+      {/* <ResponsiveView/> */}
     </main>
   );
 }
