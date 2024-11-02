@@ -18,167 +18,20 @@ import {
 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
-// const categories: Category[] = [
-//     {
-//       name: "Application",
-//       icon: Box,
-//       subcategories: [
-//         {
-//           title: "Command Menu",
-//           components: [
-//             {
-//               title: "Command Menu With Categories",
-//               description: "Advanced command menu with category filtering",
-//               path: "/components/command-menu",
-//               icon: Box,
-//               isNew: true,
-//               image: "/placeholder.svg?height=200&width=300",
-//             },
-//             {
-//               title: "Data Table",
-//               description: "Interactive data table with sorting and filtering",
-//               path: "/components/data-table",
-//               icon: Box,
-//               image: "/placeholder.svg?height=200&width=300",
-//             },
-//           ],
-//         },
-//         {
-//           title: "Cards",
-//           components: [
-//             {
-//               title: "Basic Card",
-//               description: "Reusable basic card component",
-//               path: "/components/basic-card",
-//               icon: Box,
-//               image: "/placeholder.svg?height=200&width=300",
-//             },
-//           ],
-//         },
-//       ],
-//     },
-//     {
-//       name: "AI",
-//       icon: Link2,
-//       subcategories: [
-//         {
-//           title: "Playground",
-//           components: [
-//             {
-//               title: "Interactive Playground",
-//               description: "Interactive playground for testing AI models",
-//               path: "/components/playground",
-//               icon: MessageSquare,
-//               image: "/placeholder.svg?height=200&width=300",
-//             },
-//           ],
-//         },
-//         {
-//           title: "Prompt Inputs",
-//           components: [
-//             {
-//               title: "Basic Prompt Input",
-//               description: "Input component for AI prompts",
-//               path: "/components/prompt-input",
-//               icon: MessageSquare,
-//               image: "/placeholder.svg?height=200&width=300",
-//             },
-//           ],
-//         },
-//       ],
-//     },
-//     {
-//       name: "Marketing",
-//       icon: BarChart3,
-//       subcategories: [
-//         {
-//           title: "Hero Sections",
-//           components: [
-//             {
-//               title: "Marketing Hero Section",
-//               description: "Hero section for landing pages",
-//               path: "/components/hero-section",
-//               icon: Cookie,
-//               image: "/placeholder.svg?height=200&width=300",
-//             },
-//           ],
-//         },
-//         {
-//           title: "FAQs",
-//           components: [
-//             {
-//               title: "FAQ Component",
-//               description: "Frequently asked questions component",
-//               path: "/components/faq-section",
-//               icon: Cookie,
-//               image: "/placeholder.svg?height=200&width=300",
-//             },
-//           ],
-//         },
-//       ],
-//     },
-//     {
-//       name: "E-commerce",
-//       icon: ShoppingCart,
-//       subcategories: [
-//         {
-//           title: "Product List",
-//           components: [
-//             {
-//               title: "Product List Component",
-//               description: "List of products with details",
-//               path: "/components/product-list",
-//               icon: ShoppingCart,
-//               image: "/placeholder.svg?height=200&width=300",
-//             },
-//           ],
-//         },
-//         {
-//           title: "Checkout",
-//           components: [
-//             {
-//               title: "Checkout Process",
-//               description: "E-commerce checkout component",
-//               path: "/components/checkout",
-//               icon: ShoppingCart,
-//               image: "/placeholder.svg?height=200&width=300",
-//             },
-//           ],
-//         },
-//       ],
-//     },
-//   ];
-
-// interface Category {
-//     name: string;
-//     icon: React.ElementType;
-//     subcategories: Subcategory[];
-//   }
-  
-//   interface Subcategory {
-//     title: string;
-//     components: Component[];
-//   }
-  
-//   interface Component {
-//     title: string;
-//     description: string;
-//     path: string;
-//     icon: React.ElementType;
-//     isNew?: boolean;
-//     image?: string;
-//   }
-  
-
 interface Category {
   name: string;
   icon: React.ElementType;
+  subcategories: Subcategory[];
+}
+
+interface Subcategory {
+  title: string;
+  components: Component[];
 }
 
 interface Component {
   title: string;
   description: string;
-  category: string;
   path: string;
   icon: React.ElementType;
   isNew?: boolean;
@@ -188,6 +41,7 @@ interface Component {
 export function SearchElements() {
   const [open, setOpen] = React.useState(false);
   const [search, setSearch] = React.useState("");
+  const [selectedTab, setSelectedTab] = React.useState("Application");
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -203,90 +57,156 @@ export function SearchElements() {
   }, []);
 
   const categories: Category[] = [
-    { name: "Application", icon: Box },
-    { name: "AI", icon: Link2 },
-    { name: "Marketing", icon: BarChart3 },
-    { name: "E-commerce", icon: ShoppingCart },
-  ];
-
-  const allComponents: Component[] = [
     {
-      title: "Color Filter",
-      description: "Interactive color selection filter",
-      category: "Ecommerce/Filters",
-      path: "/components/color-filter",
-      icon: ShoppingCart,
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      title: "Command Menu With Categories",
-      description: "Advanced command menu with category filtering",
-      category: "Application/Command menus",
-      path: "/components/command-menu",
+      name: "Application",
       icon: Box,
-      isNew: true,
-      image: "/placeholder.svg?height=200&width=300",
+      subcategories: [
+        {
+          title: "Command Menu",
+          components: [
+            {
+              title: "Command Menu With Categories",
+              description: "Advanced command menu with category filtering",
+              path: "/components/command-menu",
+              icon: Box,
+              isNew: true,
+              image: "/placeholder.svg?height=200&width=300",
+            },
+            {
+              title: "Data Table",
+              description: "Interactive data table with sorting and filtering",
+              path: "/components/data-table",
+              icon: Box,
+              image: "/placeholder.svg?height=200&width=300",
+            },
+          ],
+        },
+        {
+          title: "Cards",
+          components: [
+            {
+              title: "Basic Card",
+              description: "Reusable basic card component",
+              path: "/components/basic-card",
+              icon: Box,
+              image: "/placeholder.svg?height=200&width=300",
+            },
+          ],
+        },
+      ],
     },
     {
-      title: "Conversation",
-      description: "Chat interface component",
-      category: "AI/Messages",
-      path: "/components/conversation",
-      icon: MessageSquare,
-      image: "/placeholder.svg?height=200&width=300",
+      name: "AI",
+      icon: Link2,
+      subcategories: [
+        {
+          title: "Playground",
+          components: [
+            {
+              title: "Interactive Playground",
+              description: "Interactive playground for testing AI models",
+              path: "/components/playground",
+              icon: MessageSquare,
+              image: "/placeholder.svg?height=200&width=300",
+            },
+          ],
+        },
+        {
+          title: "Prompt Inputs",
+          components: [
+            {
+              title: "Basic Prompt Input",
+              description: "Input component for AI prompts",
+              path: "/components/prompt-input",
+              icon: MessageSquare,
+              image: "/placeholder.svg?height=200&width=300",
+            },
+          ],
+        },
+      ],
     },
     {
-      title: "Conversation With Failed Message",
-      description: "Chat interface with error states",
-      category: "AI/Messages",
-      path: "/components/conversation-failed",
-      icon: MessageSquare,
-      image: "/placeholder.svg?height=200&width=300",
+      name: "Marketing",
+      icon: BarChart3,
+      subcategories: [
+        {
+          title: "Hero Sections",
+          components: [
+            {
+              title: "Marketing Hero Section",
+              description: "Hero section for landing pages",
+              path: "/components/hero-section",
+              icon: Cookie,
+              image: "/placeholder.svg?height=200&width=300",
+            },
+          ],
+        },
+        {
+          title: "FAQs",
+          components: [
+            {
+              title: "FAQ Component",
+              description: "Frequently asked questions component",
+              path: "/components/faq-section",
+              icon: Cookie,
+              image: "/placeholder.svg?height=200&width=300",
+            },
+          ],
+        },
+      ],
     },
     {
-      title: "Cookie Consent At Bottom Center",
-      description: "GDPR compliant cookie notice",
-      category: "Marketing/Cookie consents",
-      path: "/components/cookie-consent-center",
-      icon: Cookie,
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      title: "Cookie Consent At Bottom Right Animated",
-      description: "Animated cookie consent banner",
-      category: "Marketing/Cookie consents",
-      path: "/components/cookie-consent-animated",
-      icon: Cookie,
-      image: "/placeholder.svg?height=200&width=300",
+      name: "E-commerce",
+      icon: ShoppingCart,
+      subcategories: [
+        {
+          title: "Product List",
+          components: [
+            {
+              title: "Product List Component",
+              description: "List of products with details",
+              path: "/components/product-list",
+              icon: ShoppingCart,
+              image: "/placeholder.svg?height=200&width=300",
+            },
+          ],
+        },
+        {
+          title: "Checkout",
+          components: [
+            {
+              title: "Checkout Process",
+              description: "E-commerce checkout component",
+              path: "/components/checkout",
+              icon: ShoppingCart,
+              image: "/placeholder.svg?height=200&width=300",
+            },
+          ],
+        },
+      ],
     },
   ];
 
+  const componentsArray: Component[] = categories.reduce((acc, category) => {
+    category.subcategories.forEach((subcategory) => {
+      acc.push(...subcategory.components);
+    });
+    return acc;
+  }, [] as Component[]);
   const filteredComponents = search
-    ? allComponents.filter(
+    ? componentsArray.filter(
         (component) =>
           component.title.toLowerCase().includes(search.toLowerCase()) ||
-          component.category.toLowerCase().includes(search.toLowerCase()) ||
+          component.path.toLowerCase().includes(search.toLowerCase()) ||
           component.description.toLowerCase().includes(search.toLowerCase())
       )
     : [];
-
-  const groupedComponents = React.useMemo(() => {
-    const grouped: Record<string, Component[]> = {};
-    allComponents.forEach((component) => {
-      const section = component.title.split(" ")[0];
-      if (!grouped[section]) {
-        grouped[section] = [];
-      }
-      grouped[section].push(component);
-    });
-    return grouped;
-  }, []);
 
   return (
     <>
       <Button
         variant="outline"
-        className="w-9 p-0"
+        className="w-9 p-0 dark:bg-accent dark:hover:bg-background"
         onClick={() => setOpen(true)}
       >
         <Search className="h-4 w-4" />
@@ -296,7 +216,10 @@ export function SearchElements() {
         open={open}
         onOpenChange={(isOpen) => {
           setOpen(isOpen);
-          if (!isOpen) setSearch(""); // Clear search when closing the modal
+          if (!isOpen) {
+            setSearch("");
+            setSelectedTab("Application");
+          } // Clear search when closing the modal
         }}
       >
         <DialogContent
@@ -316,7 +239,10 @@ export function SearchElements() {
             {search && (
               <Button
                 variant="ghost"
-                onClick={() => setSearch("")}
+                onClick={() => {
+                  //   setSelectedTab("Application");
+                  setSearch("");
+                }}
                 className="h-6 w-6 px-0 ml-2"
               >
                 <X className="h-4 w-4" />
@@ -347,7 +273,7 @@ export function SearchElements() {
                     >
                       <div className="flex items-center text-xs text-muted-foreground mb-0.5">
                         <component.icon className="h-3 w-3 mr-1.5" />
-                        {component.category}
+                        {component.path}
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium">
@@ -377,8 +303,11 @@ export function SearchElements() {
                   {categories.map((category) => (
                     <Button
                       key={category.name}
+                      onClick={() => setSelectedTab(category.name)}
                       variant="ghost"
-                      className="w-full justify-start gap-2 text-muted-foreground hover:text-foreground"
+                      className={`w-full justify-start gap-2  ${
+                        selectedTab === category.name ? "bg-accent" : ""
+                      } hover:text-foreground text-muted-foreground`}
                     >
                       <category.icon className="h-4 w-4" />
                       {category.name}
@@ -388,52 +317,56 @@ export function SearchElements() {
               </div>
               <ScrollArea className="h-[500px]">
                 <div className="p-4 grid gap-8">
-                  {Object.entries(groupedComponents).map(([section, items]) => (
-                    <div key={section}>
-                      <div className="flex items-center justify-between mb-4">
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          className="text-muted-foreground font-regular"
-                        >
-                          مشاهده همه
-                        </Button>
-                        <h3 className="text-lg font-semibold">{section}</h3>
-                      </div>
-                      <div
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-                        dir="rtl"
-                      >
-                        {items.map((item) => (
-                          <div
-                            key={item.title}
-                            className="group rounded-lg border bg-card hover:bg-accent transition-colors"
+                  {categories
+                    .find((category) => category.name === selectedTab)
+                    ?.subcategories.map((item) => (
+                      <div key={item.title}>
+                        <div className="flex items-center justify-between mb-4">
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="text-muted-foreground font-regular"
                           >
-                            <div className="aspect-video relative overflow-hidden rounded-t-lg">
-                              <img
-                                src={item.image}
-                                alt={item.title}
-                                className="object-cover w-full h-full"
-                              />
-                            </div>
-                            <div className="p-4">
-                              <div className="flex items-center justify-between mb-2">
-                                <h4 className="font-medium">{item.title}</h4>
-                                {item.isNew && (
-                                  <span className="rounded-full bg-primary/20 px-2 py-0.5 text-xs text-primary">
-                                    New
-                                  </span>
-                                )}
+                            مشاهده همه
+                          </Button>
+                          <h3 className="text-lg font-semibold">
+                            {item.title}
+                          </h3>
+                        </div>
+                        <div
+                          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                          dir="rtl"
+                        >
+                          {item.components.map((item) => (
+                            <div
+                              key={item.title}
+                              className="group rounded-lg border bg-card hover:bg-accent transition-colors"
+                            >
+                              <div className="aspect-video relative overflow-hidden rounded-t-lg">
+                                <img
+                                  src={item.image}
+                                  alt={item.title}
+                                  className="object-cover w-full h-full"
+                                />
                               </div>
-                              <p className="text-sm text-muted-foreground">
-                                {item.description}
-                              </p>
+                              <div className="p-4">
+                                <div className="flex items-center justify-between mb-2">
+                                  {/* <h4 className="font-medium">{item.title}</h4> */}
+                                  {item.isNew && (
+                                    <span className="rounded-full bg-primary/20 px-2 py-0.5 text-xs text-primary">
+                                      New
+                                    </span>
+                                  )}
+                                </div>
+                                <p className="text-sm text-muted-foreground">
+                                  {/* {item.description} */}
+                                </p>
+                              </div>
                             </div>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
                 </div>
               </ScrollArea>
             </div>
