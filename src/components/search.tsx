@@ -18,6 +18,158 @@ import {
 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
+// const categories: Category[] = [
+//     {
+//       name: "Application",
+//       icon: Box,
+//       subcategories: [
+//         {
+//           title: "Command Menu",
+//           components: [
+//             {
+//               title: "Command Menu With Categories",
+//               description: "Advanced command menu with category filtering",
+//               path: "/components/command-menu",
+//               icon: Box,
+//               isNew: true,
+//               image: "/placeholder.svg?height=200&width=300",
+//             },
+//             {
+//               title: "Data Table",
+//               description: "Interactive data table with sorting and filtering",
+//               path: "/components/data-table",
+//               icon: Box,
+//               image: "/placeholder.svg?height=200&width=300",
+//             },
+//           ],
+//         },
+//         {
+//           title: "Cards",
+//           components: [
+//             {
+//               title: "Basic Card",
+//               description: "Reusable basic card component",
+//               path: "/components/basic-card",
+//               icon: Box,
+//               image: "/placeholder.svg?height=200&width=300",
+//             },
+//           ],
+//         },
+//       ],
+//     },
+//     {
+//       name: "AI",
+//       icon: Link2,
+//       subcategories: [
+//         {
+//           title: "Playground",
+//           components: [
+//             {
+//               title: "Interactive Playground",
+//               description: "Interactive playground for testing AI models",
+//               path: "/components/playground",
+//               icon: MessageSquare,
+//               image: "/placeholder.svg?height=200&width=300",
+//             },
+//           ],
+//         },
+//         {
+//           title: "Prompt Inputs",
+//           components: [
+//             {
+//               title: "Basic Prompt Input",
+//               description: "Input component for AI prompts",
+//               path: "/components/prompt-input",
+//               icon: MessageSquare,
+//               image: "/placeholder.svg?height=200&width=300",
+//             },
+//           ],
+//         },
+//       ],
+//     },
+//     {
+//       name: "Marketing",
+//       icon: BarChart3,
+//       subcategories: [
+//         {
+//           title: "Hero Sections",
+//           components: [
+//             {
+//               title: "Marketing Hero Section",
+//               description: "Hero section for landing pages",
+//               path: "/components/hero-section",
+//               icon: Cookie,
+//               image: "/placeholder.svg?height=200&width=300",
+//             },
+//           ],
+//         },
+//         {
+//           title: "FAQs",
+//           components: [
+//             {
+//               title: "FAQ Component",
+//               description: "Frequently asked questions component",
+//               path: "/components/faq-section",
+//               icon: Cookie,
+//               image: "/placeholder.svg?height=200&width=300",
+//             },
+//           ],
+//         },
+//       ],
+//     },
+//     {
+//       name: "E-commerce",
+//       icon: ShoppingCart,
+//       subcategories: [
+//         {
+//           title: "Product List",
+//           components: [
+//             {
+//               title: "Product List Component",
+//               description: "List of products with details",
+//               path: "/components/product-list",
+//               icon: ShoppingCart,
+//               image: "/placeholder.svg?height=200&width=300",
+//             },
+//           ],
+//         },
+//         {
+//           title: "Checkout",
+//           components: [
+//             {
+//               title: "Checkout Process",
+//               description: "E-commerce checkout component",
+//               path: "/components/checkout",
+//               icon: ShoppingCart,
+//               image: "/placeholder.svg?height=200&width=300",
+//             },
+//           ],
+//         },
+//       ],
+//     },
+//   ];
+
+// interface Category {
+//     name: string;
+//     icon: React.ElementType;
+//     subcategories: Subcategory[];
+//   }
+  
+//   interface Subcategory {
+//     title: string;
+//     components: Component[];
+//   }
+  
+//   interface Component {
+//     title: string;
+//     description: string;
+//     path: string;
+//     icon: React.ElementType;
+//     isNew?: boolean;
+//     image?: string;
+//   }
+  
+
 interface Category {
   name: string;
   icon: React.ElementType;
@@ -149,8 +301,8 @@ export function SearchElements() {
       >
         <DialogContent
           className={cn(
-            "max-w-3xl p-0 gap-0",
-            search ? "max-h-[400px]" : "max-h-[80vh]"
+            "max-w-3xl p-0 gap-0"
+            // search ? "max-h-[400px]" : "max-h-[80vh]"
           )}
         >
           <div className="flex items-center border-b px-4 py-2">
@@ -158,7 +310,7 @@ export function SearchElements() {
             <Input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search component..."
+              placeholder="جستجوی کامپوننت ها ..."
               className="flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 border-0 focus-visible:ring-0"
             />
             {search && (
@@ -239,16 +391,19 @@ export function SearchElements() {
                   {Object.entries(groupedComponents).map(([section, items]) => (
                     <div key={section}>
                       <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-semibold">{section}</h3>
                         <Button
                           variant="ghost"
                           size="sm"
-                          className="text-muted-foreground"
+                          className="text-muted-foreground font-regular"
                         >
-                          View More
+                          مشاهده همه
                         </Button>
+                        <h3 className="text-lg font-semibold">{section}</h3>
                       </div>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      <div
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                        dir="rtl"
+                      >
                         {items.map((item) => (
                           <div
                             key={item.title}
