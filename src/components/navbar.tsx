@@ -23,6 +23,7 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { ModeToggle } from "./mode-toggle";
 import { Separator } from "./ui/separator";
 import { ShoppingCart } from "lucide-react";
+import { SearchElements } from "./search";
 
 export default function Navbar() {
   return (
@@ -66,14 +67,15 @@ export default function Navbar() {
             </Link>
           </Button>
 
-          <Button
+          {/* <Button
             variant="outline"
             className="flex items-center text-sm font-medium px-0 py-0 dark:bg-accent dark:hover:bg-background"
           >
             <Link href="/cart" className="w-full h-full px-2 py-2">
               <ShoppingBag size={20} />
             </Link>
-          </Button>
+          </Button> */}
+          <SearchElements />
           <ModeToggle />
           <Sheet>
             <SheetTrigger asChild>

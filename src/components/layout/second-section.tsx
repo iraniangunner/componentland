@@ -1,130 +1,134 @@
 "use client";
-import { motion } from "framer-motion";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "@/components/ui/card"
+import { Lock } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
 
-export const SecondSection = () => {
-  const features = [
+export default function SecondSection() {
+  const categories = [
     {
-      title: "500+ Components",
-      description:
-        "Beautifully designed, expertly crafted components that follow all accessibility best practices and are easy to customize.",
-      icon: (
-        <svg
-          className="h-10 w-10 transform-cpu rounded-lg shadow-md shadow-indigo-500/[.12]"
-          viewBox="0 0 40 40"
-          fill="none"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path
-            d="M.75 8A7.25 7.25 0 018 .75h24A7.25 7.25 0 0139.25 8v24A7.25 7.25 0 0132 39.25H8A7.25 7.25 0 01.75 32V8z"
-            className="fill-indigo-50 stroke-indigo-500"
-          ></path>
-          <path
-            d="M27 25.335L30.25 27l-6.603 3.382a8 8 0 01-7.294 0L9.75 27 13 25.335m14-6.999L30.25 20l-6.603 3.382a8 8 0 01-7.294 0L9.75 20 13 18.336"
-            className="stroke-indigo-500/50"
-          ></path>
-          <path
-            d="M9.75 13l9.338-4.783a2 2 0 011.824 0L30.25 13l-6.603 3.382a8 8 0 01-7.294 0L9.75 13z"
-            className="stroke-indigo-500"
-          ></path>
-        </svg>
-      ),
+      title: "Hero Sections",
+      components: 12,
+      image: "/placeholder.svg?height=400&width=600",
+      href: "#hero-sections",
     },
     {
-      title: "React, Vue, and HTML",
-      description:
-        "Interactive examples for React and Vue powered by Headless UI, plus vanilla HTML if you'd rather write any necessary JS yourself.",
-      icon: (
-        <svg
-          className="h-10 w-10 transform-cpu rounded-lg shadow-md shadow-indigo-500/[.12]"
-          viewBox="0 0 40 40"
-          fill="none"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path
-            d="M.75 8A7.25 7.25 0 018 .75h24A7.25 7.25 0 0139.25 8v24A7.25 7.25 0 0132 39.25H8A7.25 7.25 0 01.75 32V8z"
-            className="fill-indigo-50 stroke-indigo-500"
-          ></path>
-          <path
-            d="M22.25 11.75l-4.5 16.5"
-            className="stroke-indigo-500/50"
-          ></path>
-          <path
-            d="M16.25 7.75h-.5a4 4 0 00-4 4v4.007a3 3 0 01-.88 2.122 3 3 0 000 4.242 3 3 0 01.88 2.122v4.007a4 4 0 004 4h.5m7.5-24.5h.5a4 4 0 014 4v4.007a3.002 3.002 0 00.878 2.122 3 3 0 010 4.242 3 3 0 00-.878 2.122v4.007a4 4 0 01-4 4h-.5"
-            className="stroke-indigo-500"
-          ></path>
-        </svg>
-      ),
+      title: "Feature Sections",
+      components: 20,
+      image: "/placeholder.svg?height=400&width=600",
+      href: "#feature-sections",
+      isNew: true,
     },
     {
-      title: "Fully Responsive",
-      description:
-        "Every example is fully responsive and carefully designed and implemented to look great at any screen size.",
-      icon: (
-        <svg
-          className="h-10 w-10 transform-cpu rounded-lg shadow-md shadow-indigo-500/[.12]"
-          viewBox="0 0 40 40"
-          fill="none"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path
-            d="M.75 8A7.25 7.25 0 018 .75h24A7.25 7.25 0 0139.25 8v24A7.25 7.25 0 0132 39.25H8A7.25 7.25 0 01.75 32V8z"
-            className="fill-indigo-50 stroke-indigo-500"
-          ></path>
-          <path
-            d="M7.75 21.25v-1.5a4 4 0 014-4h7.5m5 5v7.5a4 4 0 01-4 4h-1.5M27.75 32.25h.5a4 4 0 004-4v-10.5m-10-10h-10.5a4 4 0 00-4 4v.5"
-            className="stroke-indigo-500/50"
-          ></path>
-          <path d="M31.5 8.5l-23 23" className="stroke-indigo-500"></path>
-          <path
-            d="M25.75 7.75h4.5a2 2 0 012 2v4.5m-18 18h-4.5a2 2 0 01-2-2v-4.5"
-            className="stroke-indigo-500"
-          ></path>
-        </svg>
-      ),
+      title: "CTA Sections",
+      components: 11,
+      image: "/placeholder.svg?height=400&width=600",
+      href: "#cta-sections",
     },
-  ];
+    {
+      title: "Bento Grids",
+      components: 3,
+      image: "/placeholder.svg?height=400&width=600",
+      href: "#bento-grids",
+    },
+    {
+      title: "Pricing Sections",
+      components: 14,
+      image: "/placeholder.svg?height=400&width=600",
+      href: "#pricing-sections",
+      isPremium: true,
+    },
+    {
+      title: "Header Sections",
+      components: 10,
+      image: "/placeholder.svg?height=400&width=600",
+      href: "#header-sections",
+    },
+    {
+      title: "Newsletter Sections",
+      components: 7,
+      image: "/placeholder.svg?height=400&width=600",
+      href: "#newsletter-sections",
+    },
+    {
+      title: "Stats",
+      components: 10,
+      image: "/placeholder.svg?height=400&width=600",
+      href: "#stats",
+    },
+    {
+      title: "Testimonials",
+      components: 7,
+      image: "/placeholder.svg?height=400&width=600",
+      href: "#testimonials",
+    },
+    {
+      title: "Blog Sections",
+      components: 7,
+      image: "/placeholder.svg?height=400&width=600",
+      href: "#blog-sections",
+    },
+    {
+      title: "Contact Sections",
+      components: 8,
+      image: "/placeholder.svg?height=400&width=600",
+      href: "#contact-sections",
+    },
+    {
+      title: "Team Sections",
+      components: 7,
+      image: "/placeholder.svg?height=400&width=600",
+      href: "#team-sections",
+    },
+  ]
 
   return (
-    <div className="flex justify-center">
-      <div className="relative z-20 sm:z-auto pt-12 md:pt-[5.75rem] md:max-w-[1500px]">
-        <div className="mx-auto max-w-container px-4 pb-16 sm:px-6 lg:px-8">
-          <div className="relative mx-auto grid max-w-[40rem] grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-              >
-                <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 min-h-[250px] flex flex-col">
-                  <CardHeader className="flex items-center">
-                    <div className="mr-4">{feature.icon}</div>
-                    <CardTitle>{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription>{feature.description}</CardDescription>
+    <section className="flex justify-center">
+      <div className="container px-4 md:px-6 lg:px-8 pt-12 md:pt-[5.75rem] md:max-w-[1500px] py-4">
+        <div className="space-y-6">
+          <div>
+            <h2 className="text-2xl font-bold tracking-tight">Page Sections</h2>
+            <p className="text-muted-foreground">
+              Beautiful, responsive page sections built with Tailwind CSS
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {categories.map((category) => (
+              <Link key={category.title} href={category.href} className="group">
+                <Card className="overflow-hidden border-2 transition-colors hover:border-primary">
+                  <CardContent className="p-0">
+                    <div className="relative">
+                      <div className="absolute right-2 top-2 flex gap-1">
+                        {category.isNew && (
+                          <Badge className="bg-primary text-primary-foreground">New</Badge>
+                        )}
+                        {category.isPremium && (
+                          <Badge variant="secondary">
+                            <Lock className="mr-1 h-3 w-3" />
+                            Premium
+                          </Badge>
+                        )}
+                      </div>
+                      <Image
+                        src={category.image}
+                        alt={`${category.title} preview`}
+                        width={600}
+                        height={400}
+                        className="aspect-[3/2] object-cover"
+                      />
+                    </div>
+                    <div className="space-y-1 p-4">
+                      <h3 className="font-semibold tracking-tight">{category.title}</h3>
+                      <p className="text-sm text-muted-foreground">{category.components} کامپوننت</p>
+                    </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </Link>
             ))}
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    </section>
+  )
+}
