@@ -256,7 +256,7 @@ export function SearchElements() {
           </div>
 
           {search ? (
-            <ScrollArea className="h-[250px] md:h-[350px]" dir="rtl">
+            <ScrollArea className="max-h-[200px] md:max-h-[350px]" dir="rtl">
               {filteredComponents.length === 0 ? (
                 <div className="p-4 text-center text-sm text-muted-foreground">
                   No components found.
@@ -317,7 +317,7 @@ export function SearchElements() {
                 </div>
               </div>
 
-              <ScrollArea className="h-[250px] md:h-[350px]" dir="rtl">
+              <ScrollArea className="max-h-[200px] md:max-h-[350px]" dir="rtl">
                 <div className="p-4 grid gap-8">
                   {categories
                     .find((category) => category.name === selectedTab)
