@@ -258,32 +258,35 @@ export function SearchElements() {
           {search ? (
             <ScrollArea className="max-h-[200px] md:max-h-[350px]" dir="rtl">
               {filteredComponents.length === 0 ? (
-                <div className="p-4 text-center text-sm text-muted-foreground">
-                  No components found.
+                <div className="p-4 text-center text-sm text-muted-foreground font-bold">
+                  کامپوننتی پیدا نشد !!
                 </div>
               ) : (
                 <div className="p-2">
                   {filteredComponents.map((component) => (
                     <button
                       key={component.path}
-                      className="w-full text-left px-2 py-2 hover:bg-accent rounded-lg group"
+                      className="w-full flex items-center justify-between px-2 py-2 hover:bg-accent rounded-lg group"
                       onClick={() => {
                         // Add navigation logic here
                         setOpen(false);
                       }}
                     >
                       <div className="flex items-center text-xs text-muted-foreground mb-0.5">
-                        <component.icon className="h-3 w-3 mr-1.5" />
-                        {component.path}
+                        <component.icon className="h-5 w-5 ml-1.5" />
+
+                        <div className="text-right">
+                          <p>{component.path}</p>
+                          <p className="text-sm font-medium">
+                            {component.title}
+                          </p>
+                        </div>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium">
-                          {component.title}
-                        </span>
                         <div className="flex items-center gap-2">
                           {component.isNew && (
-                            <span className="rounded-full bg-primary/20 px-2 py-0.5 text-xs text-primary">
-                              New
+                            <span className="rounded-full font-regular bg-primary/20 px-2 py-0.5 text-xs text-primary">
+                              جدید
                             </span>
                           )}
                           <ChevronLeft className="h-4 w-4 text-muted-foreground" />
@@ -351,8 +354,8 @@ export function SearchElements() {
                                 <div className="flex items-center justify-between absolute top-[-8px] right-[-8px]">
                                   {/* <h4 className="font-medium">{item.title}</h4> */}
                                   {item.isNew && (
-                                    <span className="rounded-full bg-primary/20 px-2 py-0.5 text-xs text-primary">
-                                      New
+                                    <span className="rounded-full font-regular bg-primary/20 px-2 py-0.5 text-xs text-primary">
+                                      جدید
                                     </span>
                                   )}
 
