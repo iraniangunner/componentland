@@ -334,34 +334,31 @@ export function SearchElements() {
                             مشاهده همه
                           </Button>
                         </div>
-                        <div
-                          className="grid grid-cols-2 lg:grid-cols-3 gap-4"
-                          dir="rtl"
-                        >
+                        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
                           {item.components.map((item) => (
                             <div
                               key={item.title}
                               className="group rounded-lg border bg-card hover:bg-accent transition-colors"
                             >
-                              <div className="aspect-video relative overflow-hidden rounded-t-lg">
+                              <div className="aspect-video relative rounded-t-lg">
                                 <img
                                   src={item.image}
                                   alt={item.title}
                                   className="object-cover w-full h-full"
                                 />
-                              </div>
-                              <div className="p-4">
-                                <div className="flex items-center justify-between mb-2">
+
+                                <div className="flex items-center justify-between absolute top-[-8px] right-[-8px]">
                                   {/* <h4 className="font-medium">{item.title}</h4> */}
                                   {item.isNew && (
                                     <span className="rounded-full bg-primary/20 px-2 py-0.5 text-xs text-primary">
                                       New
                                     </span>
                                   )}
+
+                                  <p className="text-sm text-muted-foreground">
+                                    {/* {item.description} */}
+                                  </p>
                                 </div>
-                                <p className="text-sm text-muted-foreground">
-                                  {/* {item.description} */}
-                                </p>
                               </div>
                             </div>
                           ))}

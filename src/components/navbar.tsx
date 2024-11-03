@@ -10,6 +10,7 @@ import { Toggle } from "@/components/ui/toggle";
 import {
   BlocksIcon,
   HomeIcon,
+  LogIn,
   Menu,
   Phone,
   PhoneCall,
@@ -62,8 +63,12 @@ export default function Navbar() {
         </nav>
         <div className="flex items-center gap-4">
           <Button className="hidden md:flex items-center text-sm font-medium px-0 py-0">
-            <Link href="/login" className="w-full h-full px-4 py-2">
-              ورود / عضویت
+            <Link
+              href="/login"
+              className="w-full flex justify-between items-center gap-2 h-full px-4 py-2"
+            >
+              <LogIn />
+              <p>ورود</p>
             </Link>
           </Button>
 
