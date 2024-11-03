@@ -1,6 +1,5 @@
 "use client";
-
-import * as React from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -15,6 +14,7 @@ import {
   ShoppingCart,
   MessageSquare,
   Cookie,
+  Divide,
 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
@@ -39,11 +39,11 @@ interface Component {
 }
 
 export function SearchElements() {
-  const [open, setOpen] = React.useState(false);
-  const [search, setSearch] = React.useState("");
-  const [selectedTab, setSelectedTab] = React.useState("Application");
+  const [open, setOpen] = useState(false);
+  const [search, setSearch] = useState("");
+  const [selectedTab, setSelectedTab] = useState("Application");
 
-  React.useEffect(() => {
+  useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
@@ -229,12 +229,12 @@ export function SearchElements() {
           )}
         >
           <div className="flex items-center border-b px-4 py-2">
-            <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+            <Search className="ml-2 h-4 w-4 shrink-0 opacity-50" />
             <Input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="جستجوی کامپوننت ها ..."
-              className="flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 border-0 focus-visible:ring-0"
+              placeholder="جستجوی کامپوننت ..."
+              className="flex h-11 w-full rounded-md bg-transparent shadow-none py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 border-0 focus-visible:ring-0"
             />
             {search && (
               <Button
@@ -249,13 +249,13 @@ export function SearchElements() {
                 <span className="sr-only">Clear search</span>
               </Button>
             )}
-            <div className="ml-2 bg-muted text-muted-foreground text-xs px-1.5 py-0.5 rounded">
+            <div className="mr-2 bg-muted text-muted-foreground text-xs px-1.5 py-0.5 rounded">
               ESC
             </div>
           </div>
 
           {search ? (
-            <ScrollArea className="h-[350px]">
+            <ScrollArea className="h-[150px] md:h-[350px]">
               {filteredComponents.length === 0 ? (
                 <div className="p-4 text-center text-sm text-muted-foreground">
                   No components found.
@@ -294,12 +294,12 @@ export function SearchElements() {
               )}
             </ScrollArea>
           ) : (
-            <div className="grid grid-cols-[250px_1fr]">
-              <div className="border-r p-4">
+            <div className="grid grid-cols-1 md:grid-cols-[250px_1fr]">
+              <div className="border-l p-4">
                 <h2 className="mb-4 text-sm text-muted-foreground font-medium">
-                  Categories
+                  دسته بندی ها
                 </h2>
-                <div className="space-y-2">
+                <div className="space-y-2 flex items-center overflow-auto md:block">
                   {categories.map((category) => (
                     <Button
                       key={category.name}
@@ -315,13 +315,17 @@ export function SearchElements() {
                   ))}
                 </div>
               </div>
-              <ScrollArea className="h-[500px]">
+
+              <ScrollArea className="h-[150px] md:h-[350px]" dir="rtl">
                 <div className="p-4 grid gap-8">
                   {categories
                     .find((category) => category.name === selectedTab)
                     ?.subcategories.map((item) => (
                       <div key={item.title}>
                         <div className="flex items-center justify-between mb-4">
+                          <h3 className="text-lg font-semibold">
+                            {item.title}
+                          </h3>
                           <Button
                             variant="ghost"
                             size="sm"
@@ -329,12 +333,9 @@ export function SearchElements() {
                           >
                             مشاهده همه
                           </Button>
-                          <h3 className="text-lg font-semibold">
-                            {item.title}
-                          </h3>
                         </div>
                         <div
-                          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                          className="grid grid-cols-2 lg:grid-cols-3 gap-4"
                           dir="rtl"
                         >
                           {item.components.map((item) => (
