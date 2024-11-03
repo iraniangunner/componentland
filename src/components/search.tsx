@@ -71,7 +71,7 @@ export function SearchElements() {
               path: "/components/command-menu",
               icon: Box,
               isNew: true,
-              image: "/placeholder.svg?height=200&width=300",
+              image: "../app/images/card.webp",
             },
             {
               title: "Data Table",
@@ -256,7 +256,7 @@ export function SearchElements() {
           </div>
 
           {search ? (
-            <ScrollArea className="max-h-[200px] md:max-h-[350px]" dir="rtl">
+            <ScrollArea className="max-h-[200px] md:max-h-[350px] px-3" dir="rtl">
               {filteredComponents.length === 0 ? (
                 <div className="p-4 text-center text-sm text-muted-foreground font-bold">
                   کامپوننتی پیدا نشد !!
