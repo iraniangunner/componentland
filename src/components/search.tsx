@@ -15,6 +15,7 @@ import {
   MessageSquare,
   Cookie,
   Divide,
+  ChevronLeft,
 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
@@ -255,7 +256,7 @@ export function SearchElements() {
           </div>
 
           {search ? (
-            <ScrollArea className="h-[150px] md:h-[350px]">
+            <ScrollArea className="h-[250px] md:h-[350px]" dir="rtl">
               {filteredComponents.length === 0 ? (
                 <div className="p-4 text-center text-sm text-muted-foreground">
                   No components found.
@@ -285,7 +286,7 @@ export function SearchElements() {
                               New
                             </span>
                           )}
-                          <ChevronRight className="h-4 w-4 text-muted-foreground" />
+                          <ChevronLeft className="h-4 w-4 text-muted-foreground" />
                         </div>
                       </div>
                     </button>
@@ -316,7 +317,7 @@ export function SearchElements() {
                 </div>
               </div>
 
-              <ScrollArea className="h-[150px] md:h-[350px]" dir="rtl">
+              <ScrollArea className="h-[250px] md:h-[350px]" dir="rtl">
                 <div className="p-4 grid gap-8">
                   {categories
                     .find((category) => category.name === selectedTab)
