@@ -18,6 +18,8 @@ import {
   ChevronLeft,
 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import card from "@/public/images/card.webp";
+import Image from "next/image";
 
 interface Category {
   name: string;
@@ -345,16 +347,17 @@ export function SearchElements() {
                               className="group rounded-lg border bg-card hover:bg-accent transition-colors"
                             >
                               <div className="aspect-video relative rounded-t-lg">
-                                <img
-                                  src={item.image}
+                                <Image
+                                  // src={item.image}
+                                  src={card}
                                   alt={item.title}
-                                  className="object-cover w-full h-full"
+                                  className="object-cover w-full h-full rounded-lg"
                                 />
 
                                 <div className="flex items-center justify-between absolute top-[-8px] right-[-8px]">
                                   {/* <h4 className="font-medium">{item.title}</h4> */}
                                   {item.isNew && (
-                                    <span className="rounded-full font-regular bg-primary/20 px-2 py-0.5 text-xs text-primary">
+                                    <span className="rounded-full font-regular bg-white dark:bg-primary/20 px-2 py-0.5 text-xs text-primary border">
                                       جدید
                                     </span>
                                   )}
