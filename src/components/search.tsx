@@ -18,7 +18,7 @@ import {
   ChevronLeft,
 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import card from "@/public/images/card.webp";
+import card from "@/app/images/card.webp";
 import Image from "next/image";
 
 interface Category {
