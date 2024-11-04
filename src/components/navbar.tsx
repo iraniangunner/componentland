@@ -144,8 +144,12 @@ export default function Navbar() {
                     color="blue"
                     className="items-center text-sm font-medium px-0 py-0"
                   >
-                    <Link href="/login" className="w-full h-full px-4 py-2">
-                      ورود / عضویت
+                    <Link
+                      href="/login"
+                      className="w-full flex justify-center items-center gap-2 h-full px-4 py-2"
+                    >
+                      <LogIn />
+                      <p>ورود</p>
                     </Link>
                   </Button>
                 </SheetTrigger>

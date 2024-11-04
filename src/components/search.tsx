@@ -7,14 +7,12 @@ import { cn } from "@/lib/utils";
 import {
   Search,
   X,
-  ChevronRight,
   Box,
   Link2,
   BarChart3,
   ShoppingCart,
   MessageSquare,
   Cookie,
-  Divide,
   ChevronLeft,
 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
