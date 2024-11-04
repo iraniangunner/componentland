@@ -37,7 +37,7 @@ interface Component {
   image?: string;
 }
 
-export default function Component() {
+export default function Elements() {
   const [activeTab, setActiveTab] = useState("Application");
   const categories: Category[] = [
     {
