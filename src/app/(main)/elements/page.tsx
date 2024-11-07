@@ -443,7 +443,6 @@ export default function Elements() {
                   smooth={true}
                   duration={500}
                   offset={-140}
-                  // onSetActive={() => setActiveTab(section)}
                   onSetActive={() => {
                     if (tabIsClicked) {
                       setActiveTab(section);
