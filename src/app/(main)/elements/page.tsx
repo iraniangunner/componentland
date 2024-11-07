@@ -427,7 +427,7 @@ export default function Elements() {
         </div>
         <div className="sticky flex justify-center top-14 z-40 py-4 dark:bg-[#030711]/80 backdrop-blur-sm">
           <Tabs value={activeTab} dir="rtl">
-            <TabsList className="dark:bg-gray-800/50 px-1 py-6">
+            <TabsList className="dark:bg-gray-800/50 px-2 py-6 rounded-full">
               {tabSections.map((section) => (
                 <ScrollLink
                   key={section}
@@ -441,7 +441,7 @@ export default function Elements() {
                 >
                   <TabsTrigger
                     value={section}
-                    className="test-sm lg:text-lg"
+                    className="test-sm lg:text-lg rounded-full"
                     onClick={() => setActiveTab(section)}
                   >
                     {section}
