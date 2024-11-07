@@ -39,6 +39,7 @@ interface Component {
 
 export default function Elements() {
   const [activeTab, setActiveTab] = useState("Application");
+  const [tabIsClicked, setTabIsClicked] = useState(false);
   const categories: Category[] = [
     {
       name: "Application",
@@ -436,12 +437,17 @@ export default function Elements() {
                   smooth={true}
                   duration={500}
                   offset={-140}
-                  onSetActive={() => setActiveTab(section)}
+                  // onSetActive={() => setActiveTab(section)}
+                  onSetActive={() => {
+                    if (tabIsClicked) {
+                      setActiveTab(section);
+                    }
+                  }}
                 >
                   <TabsTrigger
                     value={section}
                     className="test-sm lg:text-lg rounded-full"
-                    onClick={() => setActiveTab(section)}
+                    onClick={() => setTabIsClicked(true)}
                   >
                     {section}
                   </TabsTrigger>
