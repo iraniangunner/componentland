@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -40,6 +40,12 @@ interface Component {
 export default function Elements() {
   const [activeTab, setActiveTab] = useState("Application");
   const [tabIsClicked, setTabIsClicked] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => setTabIsClicked(true));
+    return () =>
+      window.removeEventListener("scroll", () => setTabIsClicked(false));
+  }, []);
   const categories: Category[] = [
     {
       name: "Application",
