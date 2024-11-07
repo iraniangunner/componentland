@@ -426,13 +426,12 @@ export default function Elements() {
           </p>
         </div>
         <div className="sticky flex justify-center top-14 z-40 py-4 dark:bg-[#030711]/80 backdrop-blur-sm">
-          <Tabs value={activeTab} dir="rtl">
+          <Tabs value={activeTab}>
             <TabsList className="dark:bg-gray-800/50 px-2 py-6 rounded-full">
               {tabSections.map((section) => (
                 <ScrollLink
                   key={section}
                   to={section}
-                  dir="rtl"
                   spy={true}
                   smooth={true}
                   duration={500}
